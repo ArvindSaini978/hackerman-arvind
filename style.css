@@ -1,0 +1,165 @@
+@font-face {
+    font-family: hacker;
+    src: url(./assets/Hacked-KerX.ttf);
+}
+
+@font-face {
+    font-family: rocket;
+    src: url(./assets/rocket.ttf);
+}
+
+@font-face {
+    font-family: hacker-tech;
+    src: url(./assets/Hacker-tech.ttf);
+}
+
+@font-face {
+    font-family: cracked;
+    src: url(./assets/Cracked_Code.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: hacker-tech;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    background: black;
+    background-size: cover;
+    color: rgb(120, 228, 42);
+    font-family: hacker;
+    text-transform: uppercase;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        margin-left: -15px;
+    }
+
+    50% {
+        margin-left: -5px;
+    }
+}
+
+@keyframes shake_2 {
+
+    0%,
+    100% {
+        margin-left: -15px;
+        opacity: 1;
+    }
+
+    50% {
+        margin-left: 15px;
+        opacity: 0;
+    }
+}
+
+@keyframes shake_3 {
+
+    0%,
+    100% {
+        margin-left: -5px;
+        opacity: 1;
+    }
+
+    50% {
+        margin-left: 5px;
+        opacity: 0.6;
+    }
+}
+
+.back {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.back:after {
+    content: "";
+    background-color: #0908087e;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 20px 50px 100px 50px;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: auto;
+}
+
+.animate {
+    animation-name: shake;
+    animation-duration: 100ms;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+
+.container span {
+    margin: 20px 0px 50px 0px;
+    font-size: 40px;
+    font-weight: 800;
+    align-self: center;
+    color: #1cbd65;
+}
+
+.container p {
+    margin-top: 10px;
+}
+
+.animateTitle {
+    animation-name: shake_2;
+    animation-duration: 100ms;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+
+.animateP {
+    animation-name: shake_2;
+    animation-duration: 100ms;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+    animation-delay: 150ms;
+}
+
+.animateImg {
+    animation-name: shake_3;
+    animation-duration: 100ms;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+.color-red{
+    color: rgb(226, 0, 0);
+}
+.color-green{
+    color: rgb(10, 187, 10);
+}
